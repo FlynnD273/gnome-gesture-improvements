@@ -1,7 +1,7 @@
-import Gio from '@gi-types/gio2';
-import GObject from '@gi-types/gobject2';
-import Gtk from '@gi-types/gtk4';
-import Gdk from '@gi-types/gdk4';
+import Gio from 'gi://Gio';
+import GObject from 'gi://GObject';
+import Gtk from 'gi://Gtk?version=4.0';
+import Gdk from 'gi://Gdk?version=4.0';
 import Adw from '@gi-types/adw1';
 import { AllUIObjectKeys, BooleanSettingsKeys, DoubleSettingsKeys, EnumSettingsKeys, GioSettings, IntegerSettingsKeys } from './settings';
 

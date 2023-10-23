@@ -556,15 +556,17 @@ async function readCommandLineOptions(): Promise<ProgramOptions> {
 }
 
 function transpileFiles() {
-	const matches = new glob.GlobSync(`${BASEDIR}/**/*.js`);
-	matches.found.forEach(file => {
-		console.log(`transpiling file: ${file}`);
+	const matches = glob.globSync(`${BASEDIR}/**/*.js`);
+	if (matches && matches.length) {
+		matches.forEach(file => {
+			console.log(`transpiling file: ${file}`);
 
-		const text = fs.readFileSync(file).toString();
-		let sourceFile = ts.createSourceFile(file, text, ts.ScriptTarget.ES2018, true, ts.ScriptKind.JS);
-		sourceFile = ts.transform(sourceFile, [transformExports, transformImports, transformGObjectClasses]).transformed[0];
-		fs.writeFileSync(file, printer.printFile(sourceFile));
-	});
+			const text = fs.readFileSync(file).toString();
+			let sourceFile = ts.createSourceFile(file, text, ts.ScriptTarget.ES2018, true, ts.ScriptKind.JS);
+			sourceFile = ts.transform(sourceFile, [transformExports, transformImports, transformGObjectClasses]).transformed[0];
+			fs.writeFileSync(file, printer.printFile(sourceFile));
+		});
+	}
 }
 
 let BASEDIR = 'build/extension';

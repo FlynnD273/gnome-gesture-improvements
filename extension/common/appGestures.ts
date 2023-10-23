@@ -1,7 +1,7 @@
-import Gtk from '@gi-types/gtk4';
-import Gio from '@gi-types/gio2';
-import GLib from '@gi-types/glib2';
-import GObject from '@gi-types/gobject2';
+import Gtk from 'gi://Gtk?version=4.0';
+import Gio from 'gi://Gio?version=2.0';
+import GLib from 'gi://GLib?version=2.0';
+import GObject from 'gi://GObject?version=2.0';
 import Adw from '@gi-types/adw1';
 import { ForwardBackKeyBinds, GioSettings } from './settings';
 import { registerClass } from './utils/gobject';

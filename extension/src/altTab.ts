@@ -1,5 +1,5 @@
 import Clutter from '@gi-types/clutter';
-import GLib from '@gi-types/glib2';
+import GLib from 'gi://GLib?version=2.0';
 import Shell from '@gi-types/shell';
 import St from '@gi-types/st';
 import { imports } from 'gnome-shell';
