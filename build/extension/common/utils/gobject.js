@@ -7,10 +7,12 @@
  */
 /* eslint-disable @typescript-eslint/ban-types */
 /* eslint-disable @typescript-eslint/no-explicit-any */
+/* exported registerClass */
 import GObject from 'gi://GObject';
 const OGRegisterClass = GObject.registerClass;
+
 export function registerClass(...args) {
-    if (args.length === 2)
-        return OGRegisterClass(args[0], args[1]);
-    return OGRegisterClass(args[0]);
+	if (args.length === 2)
+		return OGRegisterClass(args[0], args[1]);
+	return OGRegisterClass(args[0]);
 }
