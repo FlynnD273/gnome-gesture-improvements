@@ -25,9 +25,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@gi-types/adw1": "^1.1.1",
     "@gi-types/base-types": "^1.0.0",
     "@gi-types/gio2": "^2.68.0",
-    "@gi-types/adw1": "^1.1.1",
     "@gi-types/gjs-environment": "^1.0.0",
     "@gi-types/glib2": "^2.68.0",
     "@gi-types/gobject2": "^2.68.0",
@@ -45,6 +45,7 @@
   },
   "dependencies": {
     "@gi-types/adw1": "^1.1.1",
+    "@girs/shell-0.1": "^0.1.0-3.2.2",
     "fs": "0.0.1-security",
     "glob": "^10.3.10",
     "path": "^0.12.7",

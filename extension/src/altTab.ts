@@ -1,13 +1,12 @@
-import Clutter from '@gi-types/clutter';
-import GLib from 'gi://GLib?version=2.0';
-import Shell from '@gi-types/shell';
-import St from '@gi-types/st';
-import { imports } from 'gnome-shell';
+import Clutter from 'gi://Clutter';
+import GLib from 'gi://GLib';
+import Shell from 'gi://Shell';
+import St from 'gi://St';
 import { AltTabConstants, ExtSettings } from '../constants';
 import { TouchpadSwipeGesture } from './swipeTracker';
 
-const Main = imports.ui.main;
-const { WindowSwitcherPopup } = imports.ui.altTab;
+import * as Main from 'resource:///org/gnome/shell/ui/main.js';
+import WindowSwitcherPopup from 'resource:///org/gnome/shell/ui/altTab.js';
 
 let dummyWinCount = AltTabConstants.DUMMY_WIN_COUNT;
 

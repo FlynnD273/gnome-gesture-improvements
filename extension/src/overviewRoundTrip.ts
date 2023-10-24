@@ -1,12 +1,13 @@
-import Clutter from '@gi-types/clutter';
-import Shell from '@gi-types/shell';
-import { global, imports } from 'gnome-shell';
+import Clutter from 'gi://Clutter';
+import Shell from 'gi://Shell';
+import { global } from 'gnome-shell';
 import { OverviewNavigationState } from '../common/settings';
 import { ExtSettings, OverviewControlsState } from '../constants';
 import { createSwipeTracker } from './swipeTracker';
 
-const Main = imports.ui.main;
-const { SwipeTracker } = imports.ui.swipeTracker;
+import * as Main from 'resource:///org/gnome/shell/ui/main.js';
+import SwipeTracker from 'resource:///org/gnome/shell/ui/swipeTracker.js';
+import OverviewControls from 'resource:///org/gnome/shell/ui/overviewControls.js'
 
 // declare enum
 enum ExtensionState {
@@ -16,9 +17,9 @@ enum ExtensionState {
 }
 
 export class OverviewRoundTripGestureExtension implements ISubExtension {
-	private _overviewControls: imports.ui.overviewControls.OverviewControlsManager;
-	private _stateAdjustment: imports.ui.overviewControls.OverviewAdjustment;
-	private _oldGetStateTransitionParams: typeof imports.ui.overviewControls.OverviewAdjustment.prototype.getStateTransitionParams;
+	private _overviewControls: OverviewControls.OverviewControlsManager;
+	private _stateAdjustment: OverviewControls.OverviewAdjustment;
+	private _oldGetStateTransitionParams: typeof OverviewControls.OverviewAdjustment.prototype.getStateTransitionParams;
 	private _swipeTracker?: typeof SwipeTracker.prototype;
 	private _progress = 0;
 	private _extensionState = ExtensionState.DEFAULT;
@@ -36,7 +37,7 @@ export class OverviewRoundTripGestureExtension implements ISubExtension {
 		this._connectors = [];
 	}
 
-	_getStateTransitionParams(): typeof imports.ui.overviewControls.OverviewAdjustment.prototype.getStateTransitionParams.prototype {
+	_getStateTransitionParams(): typeof OverviewControls.OverviewAdjustment.prototype.getStateTransitionParams.prototype {
 		if (this._extensionState <= ExtensionState.DEFAULT) {
 			return this._oldGetStateTransitionParams.call(this._stateAdjustment);
 		}

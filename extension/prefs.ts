@@ -1,5 +1,5 @@
 // import Gtk from '@gi-types/gtk4';
-import Adw from '@gi-types/adw1';
+import Adw from 'gi://Adw';
 
 // import { imports } from 'gnome-shell';
 import { buildPrefsWidget } from './common/prefs';

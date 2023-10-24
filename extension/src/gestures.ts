@@ -1,11 +1,11 @@
-import Clutter from '@gi-types/clutter';
-import GObject from '@gi-types/gobject2';
-import Shell from '@gi-types/shell';
-import { CustomEventType, global, imports, __shell_private_types } from 'gnome-shell';
+import Clutter from 'gi://Clutter';
+import GObject from 'gi://GObject';
+import Shell from 'gi://Shell';
+import { CustomEventType, global, __shell_private_types } from 'gnome-shell';
 import { ExtSettings, OverviewControlsState } from '../constants';
 import { createSwipeTracker, TouchpadSwipeGesture } from './swipeTracker';
 
-const Main = imports.ui.main;
+import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 
 declare interface ShallowSwipeTrackerT {
 	orientation: Clutter.Orientation,

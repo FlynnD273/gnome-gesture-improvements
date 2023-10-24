@@ -1,7 +1,7 @@
 // import GObject from '@gi-types/gobject2';
-import Gio from '@gi-types/gio2';
-import Clutter from '@gi-types/clutter';
-import St from '@gi-types/st';
+import Gio from 'gi://Gio';
+import Clutter from 'gi://Clutter';
+import St from 'gi://St';
 
 import { imports } from 'gnome-shell';
 import { registerClass } from '../../common/utils/gobject';

@@ -1,0 +1,11 @@
+{
+  "description": "Improve touchpad gestures for Wayland/X11\n\nThis extension adds following features:\n\n• Switch windows from current workspace using 3-finger horizontal swipe\n• Cyclic gestures between Desktop/Overview/AppGrid using 4 vertical swipe\n• Switch app-pages using 3-finger swipe gesture on AppGrid\n• Unmaximize/maximize/fullscreen/half-tiling using 3-finger vertical & horizontal gesture\n• Optional minimize a window gesture\n• Override 3-finger gesture with 4-finger for switching workspace\n• Pinch to show desktop\n• Application specific keyboard shortcut based hold-swipe gestures (e.g., navigating browser tabs)\n• Configure speed of gestures\n• Support for X11\n   \nOn X11, you need to install https://github.com/harshadgavali/gnome-x11-gesture-daemon\n\nReport any bugs/requests on GitHub (link directly below)\n",
+  "name": "Gesture Improvements",
+  "shell-version": [
+    "45"
+  ],
+  "settings-schema": "org.gnome.shell.extensions.gestureImprovements",
+  "url": "https://github.com/harshadgavali/gnome-gesture-improvements",
+  "uuid": "gestureImprovements@gestures",
+  "version": 27
+}

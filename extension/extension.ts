@@ -1,5 +1,4 @@
-import GLib from 'gi://GLib?version=2.0';
-// import { imports } from 'gnome-shell';
+import GLib from 'gi://GLib';
 import { AllSettingsKeys, GioSettings, PinchGestureType } from './common/settings';
 import * as Constants from './constants';
 import { AltTabConstants, ExtSettings, TouchpadConstants } from './constants';

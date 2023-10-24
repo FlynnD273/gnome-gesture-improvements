@@ -4,6 +4,7 @@
         "typeRoots": [
             "./node_modules/@types",
             "./node_modules/@gi-types"
+            "resource:///org/gnome/shell"
         ],
         "types": [
             "gjs-environment",
@@ -12,7 +13,7 @@
             "node"
         ],
         "lib": [
-            "ES2019"
+            "ES2022"
         ],
         "allowSyntheticDefaultImports": true,
         "rootDir": "./",

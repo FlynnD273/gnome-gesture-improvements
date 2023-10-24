@@ -1,8 +1,8 @@
-import Clutter from '@gi-types/clutter';
-import Shell from '@gi-types/shell';
-import Meta from '@gi-types/meta';
+import Clutter from 'gi://Clutter';
+import Shell from 'gi://Shell';
+import Meta from 'gi://Meta';
 
-import { imports, global } from 'gnome-shell';
+import { global } from 'gnome-shell';
 
 import { ExtSettings } from '../constants';
 import { ArrowIconAnimation } from './animations/arrow';
@@ -10,8 +10,8 @@ import { createSwipeTracker } from './swipeTracker';
 import { getVirtualKeyboard, IVirtualKeyboard } from './utils/keyboard';
 import { ForwardBackKeyBinds } from '../common/settings';
 
-const Main = imports.ui.main;
-declare type SwipeTrackerT = imports.ui.swipeTracker.SwipeTracker;
+import * as Main from 'resource:///org/gnome/shell/ui/ui/main.js';
+import SwipeTrackerT from 'resource:///org/gnome/shell/ui/ui/SwipeTracker.js'
 
 // declare enum
 enum AnimationState {
